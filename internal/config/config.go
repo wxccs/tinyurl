@@ -47,25 +47,12 @@ func Load() (*Config, error) {
 		return nil, err
 	}
 
-	cfg.applyDefaults()
 	cfg.validate()
 
 	return cfg, nil
 }
 
-func (c *Config) applyDefaults() {
-	if c.Server.Host == "" {
-		c.Server.Host = "0.0.0.0"
-	}
-	if c.Server.Port == 0 {
-		c.Server.Port = 8080
-	}
-	if c.Database.Type == "" {
-		c.Database.Type = "sqlite"
-	}
-	if c.Database.Path == "" {
-		c.Database.Path = "data/tinyurl.db"
-	}
+func (c *Config) validate() {
 	if c.Database.Port == 0 {
 		switch c.Database.Type {
 		case "mysql":
@@ -74,18 +61,9 @@ func (c *Config) applyDefaults() {
 			c.Database.Port = 5432
 		}
 	}
-	if c.Database.DBName == "" {
-		c.Database.DBName = "tinyurl"
-	}
 	if c.ShortURL.Length < 7 {
 		c.ShortURL.Length = 7
 	}
-	if c.Page.Title == "" {
-		c.Page.Title = "TinyURL - Short URL Generator"
-	}
-}
-
-func (c *Config) validate() {
 	if c.ShortURL.NodeID < 0 {
 		c.ShortURL.NodeID = 0
 	}

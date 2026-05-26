@@ -1,5 +1,4 @@
 import { createI18n } from 'vue-i18n'
-import en from './locales/en.json'
 
 export const SUPPORTED_LOCALES = {
   en: 'English',
@@ -38,7 +37,7 @@ export const SUPPORTED_LOCALES = {
 const LOCALE_CODES = new Set(Object.keys(SUPPORTED_LOCALES))
 const RTL_LOCALE_CODES = new Set(['ar', 'fa', 'ur', 'he'])
 const HANT_REGIONS = new Set(['TW', 'HK', 'MO'])
-const loadedLocales = new Set(['en'])
+const loadedLocales = new Set()
 
 const localeModules = import.meta.glob('./locales/*.json')
 
@@ -81,7 +80,7 @@ const i18n = createI18n({
   legacy: false,
   locale: detectLocale(),
   fallbackLocale: 'en',
-  messages: { en },
+  messages: {},
 })
 
 export async function loadLocaleMessages(locale) {

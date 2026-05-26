@@ -23,6 +23,8 @@ import (
 )
 
 var cfgFile string
+var listenAddr string
+var listenPort int
 var logLevel int
 var logFile string
 
@@ -44,9 +46,13 @@ func Execute() {
 
 func init() {
 	cobra.OnInitialize(initConfig)
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.config/tinyurl/config.yaml)")
+	rootCmd.PersistentFlags().StringVarP(&cfgFile, "config", "c", "", "config file (default is $HOME/.config/tinyurl/config.yaml)")
+	rootCmd.PersistentFlags().StringVarP(&listenAddr, "listen-address", "l", "127.0.0.1", "server listen address")
+	rootCmd.PersistentFlags().IntVarP(&listenPort, "listen-port", "p", 8080, "server listen port")
 	rootCmd.PersistentFlags().IntVar(&logLevel, "log-level", 3, "log level (0=Panic, 1=Fatal, 2=Error, 3=Warn, 4=Info, 5=Debug, 6=Trace)")
 	rootCmd.PersistentFlags().StringVar(&logFile, "log-file", "", "log file path (default empty, logs to stdout only)")
+	_ = viper.BindPFlag("server.host", rootCmd.PersistentFlags().Lookup("listen-address"))
+	_ = viper.BindPFlag("server.port", rootCmd.PersistentFlags().Lookup("listen-port"))
 	_ = viper.BindPFlag("log.level", rootCmd.PersistentFlags().Lookup("log-level"))
 	_ = viper.BindPFlag("log.file", rootCmd.PersistentFlags().Lookup("log-file"))
 	rootCmd.SetVersionTemplate(fmt.Sprintf(`{{with .Name}}{{printf "%%s version information: " .}}{{end}}
@@ -77,6 +83,12 @@ func initConfig() {
 	viper.AutomaticEnv()
 	viper.SetEnvPrefix("TU")
 	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_", "-", "_"))
+
+	viper.SetDefault("database.type", "sqlite")
+	viper.SetDefault("database.path", "data/tinyurl.db")
+	viper.SetDefault("database.dbname", "tinyurl")
+	viper.SetDefault("shorturl.length", 7)
+	viper.SetDefault("page.title", "TinyURL - Short URL Generator")
 
 	if err := viper.ReadInConfig(); err == nil {
 		fmt.Fprintln(os.Stderr, "Using config file:", viper.ConfigFileUsed())
