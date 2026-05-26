@@ -84,6 +84,8 @@ func initConfig() {
 	viper.SetEnvPrefix("TU")
 	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_", "-", "_"))
 
+	viper.SetDefault("server.host", "127.0.0.1")
+	viper.SetDefault("server.port", 8080)
 	viper.SetDefault("database.type", "sqlite")
 	viper.SetDefault("database.host", "")
 	viper.SetDefault("database.port", 0)
@@ -92,7 +94,12 @@ func initConfig() {
 	viper.SetDefault("database.dbname", "tinyurl")
 	viper.SetDefault("database.path", "data/tinyurl.db")
 	viper.SetDefault("shorturl.length", 7)
+	viper.SetDefault("shorturl.node_id", 0)
 	viper.SetDefault("page.title", "TinyURL - Short URL Generator")
+	viper.SetDefault("beian.miit", "")
+	viper.SetDefault("beian.mps", "")
+	viper.SetDefault("log.level", 3)
+	viper.SetDefault("log.file", "")
 
 	if err := viper.ReadInConfig(); err == nil {
 		fmt.Fprintln(os.Stderr, "Using config file:", viper.ConfigFileUsed())
