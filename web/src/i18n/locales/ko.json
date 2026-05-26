@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - 단축 URL 생성기",
+    "subtitle": "긴 URL을 붙여넣어 단축 URL을 생성하세요"
+  },
+  "form": {
+    "placeholder": "긴 URL을 여기에 입력하세요...",
+    "button": "생성",
+    "copy": "복사",
+    "copied": "복사됨!"
+  },
+  "result": {
+    "shortUrl": "단축 URL"
+  },
+  "error": {
+    "emptyUrl": "URL을 입력해 주세요",
+    "invalidUrl": "유효한 URL을 입력해 주세요",
+    "generateFailed": "단축 URL 생성에 실패했습니다"
+  }
+}

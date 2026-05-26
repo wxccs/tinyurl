@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - Generator URL Pendek",
+    "subtitle": "Tempel URL panjang Anda untuk menghasilkan URL pendek"
+  },
+  "form": {
+    "placeholder": "Masukkan URL panjang Anda di sini...",
+    "button": "Buat",
+    "copy": "Salin",
+    "copied": "Tersalin!"
+  },
+  "result": {
+    "shortUrl": "URL Pendek"
+  },
+  "error": {
+    "emptyUrl": "Silakan masukkan URL",
+    "invalidUrl": "Silakan masukkan URL yang valid",
+    "generateFailed": "Gagal membuat URL pendek"
+  }
+}

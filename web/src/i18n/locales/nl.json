@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - Korte URL-generator",
+    "subtitle": "Plak je lange URL om een korte te genereren"
+  },
+  "form": {
+    "placeholder": "Voer hier je lange URL in...",
+    "button": "Genereren",
+    "copy": "Kopiëren",
+    "copied": "Gekopieerd!"
+  },
+  "result": {
+    "shortUrl": "Korte URL"
+  },
+  "error": {
+    "emptyUrl": "Voer een URL in",
+    "invalidUrl": "Voer een geldige URL in",
+    "generateFailed": "Korte URL genereren mislukt"
+  }
+}

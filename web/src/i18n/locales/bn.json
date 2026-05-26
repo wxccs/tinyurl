@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - সংক্ষিপ্ত URL জেনারেটর",
+    "subtitle": "সংক্ষিপ্ত URL তৈরি করতে আপনার দীর্ঘ URL পেস্ট করুন"
+  },
+  "form": {
+    "placeholder": "আপনার দীর্ঘ URL এখানে লিখুন...",
+    "button": "তৈরি করুন",
+    "copy": "কপি করুন",
+    "copied": "কপি হয়েছে!"
+  },
+  "result": {
+    "shortUrl": "সংক্ষিপ্ত URL"
+  },
+  "error": {
+    "emptyUrl": "অনুগ্রহ করে একটি URL লিখুন",
+    "invalidUrl": "অনুগ্রহ করে একটি বৈধ URL লিখুন",
+    "generateFailed": "সংক্ষিপ্ত URL তৈরি করতে ব্যর্থ"
+  }
+}

@@ -1,0 +1,36 @@
+services:
+  tinyurl:
+    image: ghcr.io/wxccs/tinyurl:latest
+    build: .
+    container_name: tinyurl
+    ports:
+      - "8080:8080"
+    volumes:
+      - tinyurl-data:/app/data
+      # - ./config.yaml:/home/appuser/.config/tinyurl/config.yaml:ro
+    environment:
+      - TU_SERVER_HOST=0.0.0.0
+      - TU_SERVER_PORT=8080
+      - TU_DATABASE_TYPE=sqlite
+      - TU_DATABASE_PATH=/app/data/tinyurl.db
+      - TU_SHORTURL_LENGTH=7
+      - TU_SHORTURL_NODE_ID=0
+      - TU_LOG_LEVEL=4
+      # MySQL example:
+      # - TU_DATABASE_TYPE=mysql
+      # - TU_DATABASE_HOST=mysql
+      # - TU_DATABASE_PORT=3306
+      # - TU_DATABASE_USER=tinyurl
+      # - TU_DATABASE_PASSWORD=changeme
+      # - TU_DATABASE_DBNAME=tinyurl
+      # PostgreSQL example:
+      # - TU_DATABASE_TYPE=postgres
+      # - TU_DATABASE_HOST=postgres
+      # - TU_DATABASE_PORT=5432
+      # - TU_DATABASE_USER=tinyurl
+      # - TU_DATABASE_PASSWORD=changeme
+      # - TU_DATABASE_DBNAME=tinyurl
+    restart: unless-stopped
+
+volumes:
+  tinyurl-data:

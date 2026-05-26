@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - کوتاه‌کننده URL",
+    "subtitle": "URL بلند خود را بچسبانید تا URL کوتاه تولید شود"
+  },
+  "form": {
+    "placeholder": "URL بلند خود را اینجا وارد کنید...",
+    "button": "تولید",
+    "copy": "کپی",
+    "copied": "کپی شد!"
+  },
+  "result": {
+    "shortUrl": "URL کوتاه"
+  },
+  "error": {
+    "emptyUrl": "لطفاً یک URL وارد کنید",
+    "invalidUrl": "لطفاً یک URL معتبر وارد کنید",
+    "generateFailed": "تولید URL کوتاه ناموفق بود"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - Rövid URL generátor",
+    "subtitle": "Illeszd be a hosszú URL-t egy rövid generálásához"
+  },
+  "form": {
+    "placeholder": "Írd be a hosszú URL-t ide...",
+    "button": "Generálás",
+    "copy": "Másolás",
+    "copied": "Lemásolva!"
+  },
+  "result": {
+    "shortUrl": "Rövid URL"
+  },
+  "error": {
+    "emptyUrl": "Kérlek adj meg egy URL-t",
+    "invalidUrl": "Kérlek adj meg egy érvényes URL-t",
+    "generateFailed": "Nem sikerült rövid URL-t generálni"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - Generátor krátkých URL",
+    "subtitle": "Vložte dlouhou URL a vygenerujte krátkou"
+  },
+  "form": {
+    "placeholder": "Zadejte svou dlouhou URL zde...",
+    "button": "Vygenerovat",
+    "copy": "Kopírovat",
+    "copied": "Zkopírováno!"
+  },
+  "result": {
+    "shortUrl": "Krátká URL"
+  },
+  "error": {
+    "emptyUrl": "Zadejte prosím URL",
+    "invalidUrl": "Zadejte prosím platnou URL",
+    "generateFailed": "Nepodařilo se vygenerovat krátkou URL"
+  }
+}

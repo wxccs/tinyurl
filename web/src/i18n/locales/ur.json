@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - مختصر URL جنریٹر",
+    "subtitle": "مختصر URL بنانے کے لیے اپنا طویل URL پیسٹ کریں"
+  },
+  "form": {
+    "placeholder": "اپنا طویل URL یہاں درج کریں...",
+    "button": "بنائیں",
+    "copy": "کاپی",
+    "copied": "کاپی ہوگیا!"
+  },
+  "result": {
+    "shortUrl": "مختصر URL"
+  },
+  "error": {
+    "emptyUrl": "براہ کرم ایک URL درج کریں",
+    "invalidUrl": "براہ کرم ایک درست URL درج کریں",
+    "generateFailed": "مختصر URL بنانا ناکام ہوا"
+  }
+}

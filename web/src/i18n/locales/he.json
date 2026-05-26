@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - מחולל כתובות URL קצרות",
+    "subtitle": "הדבק את כתובת ה-URL הארוכה שלך כדי ליצור כתובת קצרה"
+  },
+  "form": {
+    "placeholder": "הזן את כתובת ה-URL הארוכה שלך כאן...",
+    "button": "צור",
+    "copy": "העתק",
+    "copied": "הועתק!"
+  },
+  "result": {
+    "shortUrl": "כתובת URL קצרה"
+  },
+  "error": {
+    "emptyUrl": "נא להזין כתובת URL",
+    "invalidUrl": "נא להזין כתובת URL תקינה",
+    "generateFailed": "יצירת כתובת URL קצרה נכשלה"
+  }
+}

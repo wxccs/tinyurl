@@ -1,0 +1,10 @@
+.idea
+.claude
+*.local.md
+data/
+*.db
+web/node_modules/
+web/dist/
+*.yaml
+!docker-compose.yaml
+!.github/**/*.yaml

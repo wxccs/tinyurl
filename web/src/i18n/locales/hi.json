@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - लघु URL जनरेटर",
+    "subtitle": "अपना लंबा URL पेस्ट करें और लघु URL प्राप्त करें"
+  },
+  "form": {
+    "placeholder": "यहाँ अपना लंबा URL दर्ज करें...",
+    "button": "जनरेट करें",
+    "copy": "कॉपी करें",
+    "copied": "कॉपी हो गया!"
+  },
+  "result": {
+    "shortUrl": "लघु URL"
+  },
+  "error": {
+    "emptyUrl": "कृपया एक URL दर्ज करें",
+    "invalidUrl": "कृपया एक मान्य URL दर्ज करें",
+    "generateFailed": "लघु URL जनरेट करने में विफल"
+  }
+}

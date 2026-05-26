@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - Trình tạo URL ngắn",
+    "subtitle": "Dán URL dài của bạn để tạo URL ngắn"
+  },
+  "form": {
+    "placeholder": "Nhập URL dài của bạn tại đây...",
+    "button": "Tạo",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép!"
+  },
+  "result": {
+    "shortUrl": "URL ngắn"
+  },
+  "error": {
+    "emptyUrl": "Vui lòng nhập URL",
+    "invalidUrl": "Vui lòng nhập URL hợp lệ",
+    "generateFailed": "Không thể tạo URL ngắn"
+  }
+}

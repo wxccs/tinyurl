@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - เครื่องมือสร้าง URL สั้น",
+    "subtitle": "วาง URL ยาวของคุณเพื่อสร้าง URL สั้น"
+  },
+  "form": {
+    "placeholder": "ป้อน URL ยาวของคุณที่นี่...",
+    "button": "สร้าง",
+    "copy": "คัดลอก",
+    "copied": "คัดลอกแล้ว!"
+  },
+  "result": {
+    "shortUrl": "URL สั้น"
+  },
+  "error": {
+    "emptyUrl": "กรุณาป้อน URL",
+    "invalidUrl": "กรุณาป้อน URL ที่ถูกต้อง",
+    "generateFailed": "ไม่สามารถสร้าง URL สั้นได้"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "短链接生成器",
+    "subtitle": "粘贴长链接，生成短链接"
+  },
+  "form": {
+    "placeholder": "请输入长链接...",
+    "button": "生成",
+    "copy": "复制",
+    "copied": "已复制！"
+  },
+  "result": {
+    "shortUrl": "短链接"
+  },
+  "error": {
+    "emptyUrl": "请输入链接",
+    "invalidUrl": "请输入有效的链接",
+    "generateFailed": "生成短链接失败"
+  }
+}

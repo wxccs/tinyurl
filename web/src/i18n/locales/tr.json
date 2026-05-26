@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - Kısa URL Oluşturucu",
+    "subtitle": "Uzun URL'nizi yapıştırarak kısa bir URL oluşturun"
+  },
+  "form": {
+    "placeholder": "Uzun URL'nizi buraya girin...",
+    "button": "Oluştur",
+    "copy": "Kopyala",
+    "copied": "Kopyalandı!"
+  },
+  "result": {
+    "shortUrl": "Kısa URL"
+  },
+  "error": {
+    "emptyUrl": "Lütfen bir URL girin",
+    "invalidUrl": "Lütfen geçerli bir URL girin",
+    "generateFailed": "Kısa URL oluşturulamadı"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - Generator de URL-uri scurte",
+    "subtitle": "Lipește URL-ul lung pentru a genera unul scurt"
+  },
+  "form": {
+    "placeholder": "Introdu URL-ul lung aici...",
+    "button": "Generează",
+    "copy": "Copiază",
+    "copied": "Copiat!"
+  },
+  "result": {
+    "shortUrl": "URL scurt"
+  },
+  "error": {
+    "emptyUrl": "Te rog introdu un URL",
+    "invalidUrl": "Te rog introdu un URL valid",
+    "generateFailed": "Generarea URL-ului scurt a eșuat"
+  }
+}

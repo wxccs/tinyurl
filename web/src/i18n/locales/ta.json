@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - குறுகிய URL உருவாக்கி",
+    "subtitle": "குறுகிய URL உருவாக்க உங்கள் நீண்ட URL ஐ ஒட்டவும்"
+  },
+  "form": {
+    "placeholder": "உங்கள் நீண்ட URL ஐ இங்கே உள்ளிடவும்...",
+    "button": "உருவாக்கு",
+    "copy": "நகலெடு",
+    "copied": "நகலெடுக்கப்பட்டது!"
+  },
+  "result": {
+    "shortUrl": "குறுகிய URL"
+  },
+  "error": {
+    "emptyUrl": "ஒரு URL ஐ உள்ளிடவும்",
+    "invalidUrl": "சரியான URL ஐ உள்ளிடவும்",
+    "generateFailed": "குறுகிய URL உருவாக்க முடியவில்லை"
+  }
+}

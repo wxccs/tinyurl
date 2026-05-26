@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - Penjana URL Pendek",
+    "subtitle": "Tampal URL panjang anda untuk menjana URL pendek"
+  },
+  "form": {
+    "placeholder": "Masukkan URL panjang anda di sini...",
+    "button": "Jana",
+    "copy": "Salin",
+    "copied": "Disalin!"
+  },
+  "result": {
+    "shortUrl": "URL Pendek"
+  },
+  "error": {
+    "emptyUrl": "Sila masukkan URL",
+    "invalidUrl": "Sila masukkan URL yang sah",
+    "generateFailed": "Gagal menjana URL pendek"
+  }
+}

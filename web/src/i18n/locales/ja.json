@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - 短縮URLジェネレーター",
+    "subtitle": "長いURLを貼り付けて短縮URLを生成してください"
+  },
+  "form": {
+    "placeholder": "長いURLをここに入力...",
+    "button": "生成",
+    "copy": "コピー",
+    "copied": "コピーしました！"
+  },
+  "result": {
+    "shortUrl": "短縮URL"
+  },
+  "error": {
+    "emptyUrl": "URLを入力してください",
+    "invalidUrl": "有効なURLを入力してください",
+    "generateFailed": "短縮URLの生成に失敗しました"
+  }
+}

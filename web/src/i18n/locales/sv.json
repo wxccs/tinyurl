@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - Kort URL-generator",
+    "subtitle": "Klistra in din långa URL för att generera en kort"
+  },
+  "form": {
+    "placeholder": "Ange din långa URL här...",
+    "button": "Generera",
+    "copy": "Kopiera",
+    "copied": "Kopierad!"
+  },
+  "result": {
+    "shortUrl": "Kort URL"
+  },
+  "error": {
+    "emptyUrl": "Vänligen ange en URL",
+    "invalidUrl": "Vänligen ange en giltig URL",
+    "generateFailed": "Det gick inte att generera kort URL"
+  }
+}

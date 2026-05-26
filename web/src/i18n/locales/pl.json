@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "TinyURL - Generator krótkich URL",
+    "subtitle": "Wklej długi URL, aby wygenerować krótki"
+  },
+  "form": {
+    "placeholder": "Wprowadź długi URL tutaj...",
+    "button": "Generuj",
+    "copy": "Kopiuj",
+    "copied": "Skopiowano!"
+  },
+  "result": {
+    "shortUrl": "Krótki URL"
+  },
+  "error": {
+    "emptyUrl": "Proszę podać URL",
+    "invalidUrl": "Proszę podać prawidłowy URL",
+    "generateFailed": "Nie udało się wygenerować krótkiego URL"
+  }
+}

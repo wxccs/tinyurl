@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "短網址產生器",
+    "subtitle": "貼上長網址，產生短網址"
+  },
+  "form": {
+    "placeholder": "請輸入長網址...",
+    "button": "產生",
+    "copy": "複製",
+    "copied": "已複製！"
+  },
+  "result": {
+    "shortUrl": "短網址"
+  },
+  "error": {
+    "emptyUrl": "請輸入網址",
+    "invalidUrl": "請輸入有效的網址",
+    "generateFailed": "產生短網址失敗"
+  }
+}
