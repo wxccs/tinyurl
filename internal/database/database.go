@@ -3,9 +3,9 @@ package database
 import (
 	"fmt"
 
+	"github.com/glebarez/sqlite"
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"
-	"github.com/glebarez/sqlite"
 	"gorm.io/gorm"
 
 	"github.com/wxccs/tinyurl/app/Models"

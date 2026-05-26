@@ -85,8 +85,12 @@ func initConfig() {
 	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_", "-", "_"))
 
 	viper.SetDefault("database.type", "sqlite")
-	viper.SetDefault("database.path", "data/tinyurl.db")
+	viper.SetDefault("database.host", "")
+	viper.SetDefault("database.port", 0)
+	viper.SetDefault("database.user", "")
+	viper.SetDefault("database.password", "")
 	viper.SetDefault("database.dbname", "tinyurl")
+	viper.SetDefault("database.path", "data/tinyurl.db")
 	viper.SetDefault("shorturl.length", 7)
 	viper.SetDefault("page.title", "TinyURL - Short URL Generator")
 
