@@ -39,6 +39,32 @@ func Shorten(c *gin.Context) {
 		return
 	}
 
+	originalUrl := req.URL
+
+	if isOwnShortUrl(c, parsed) {
+		var existing Models.Url
+		if result := global.DB.Where("short_code = ?", parsed.Path[1:]).First(&existing); result.Error == nil {
+			originalUrl = existing.OriginalUrl
+			global.Log.WithField("func", funcName).WithField("original_url", originalUrl).Info("resolved own short url to original")
+		}
+	}
+
+	var existing Models.Url
+	if result := global.DB.Where("original_url = ?", originalUrl).First(&existing); result.Error == nil {
+		scheme := "http"
+		if c.Request.TLS != nil || c.GetHeader("X-Forwarded-Proto") == "https" {
+			scheme = "https"
+		}
+		shortUrl := scheme + "://" + c.Request.Host + "/" + existing.ShortCode
+		global.Log.WithField("func", funcName).WithField("short_code", existing.ShortCode).Info("returned existing short url")
+		Controllers.NewResponse(Controllers.RESPONSE_OK, "success", ShortenResponse{
+			ShortCode:   existing.ShortCode,
+			ShortUrl:    shortUrl,
+			OriginalUrl: originalUrl,
+		}).ResponseJson(200, c)
+		return
+	}
+
 	var urlModel Models.Url
 	const maxRetries = 5
 
@@ -52,7 +78,7 @@ func Shorten(c *gin.Context) {
 
 		urlModel = Models.Url{
 			ShortCode:   code,
-			OriginalUrl: req.URL,
+			OriginalUrl: originalUrl,
 		}
 
 		result := global.DB.Create(&urlModel)
@@ -67,7 +93,7 @@ func Shorten(c *gin.Context) {
 			Controllers.NewResponse(Controllers.RESPONSE_OK, "success", ShortenResponse{
 				ShortCode:   code,
 				ShortUrl:    shortUrl,
-				OriginalUrl: req.URL,
+				OriginalUrl: originalUrl,
 			}).ResponseJson(200, c)
 			return
 		}
@@ -77,6 +103,18 @@ func Shorten(c *gin.Context) {
 
 	global.Log.WithField("func", funcName).Error("failed to generate unique short code after retries")
 	Controllers.NewResponse(Controllers.RESPONSE_BACKEND_ERROR, "failed to generate unique short code", nil).ResponseJson(500, c)
+}
+
+func isOwnShortUrl(c *gin.Context, parsed *url.URL) bool {
+	if parsed.Host != c.Request.Host {
+		return false
+	}
+	path := parsed.Path
+	if len(path) < 2 {
+		return false
+	}
+	code := path[1:]
+	return base62Regex.MatchString(code) && len(code) == global.Config.ShortURL.Length
 }
 
 func Redirect(c *gin.Context) {
